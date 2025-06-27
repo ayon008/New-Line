@@ -9,11 +9,14 @@ const montserrat = Montserrat({
     variable: '--font-montserrat', // optional CSS variable
 });
 
-const Main = () => {
+const Main = ({ children }) => {
     return (
         <div className={`${montserrat.className}`}>
-            <NavComponent />
-            <Navbar />
+            <div className='absolute right-0 left-0 top-0 z-50 bg-white md:rounded-bl-[50px] md:rounded-br-[50px] rounded-br-[8px] rounded-bl-[8px]'>
+                <NavComponent />
+                <Navbar />
+            </div>
+            {children}
         </div>
     );
 };

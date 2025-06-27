@@ -4,8 +4,14 @@ import logo from '../../public/828e82de-b777-4fda-bb35-cf5b54409638-removebg-pre
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import PrimaryButton from './Buttons/PrimaryButton';
-import { Menu, Sheet } from 'lucide-react';
-import { SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import {
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTrigger,
+} from "@/components/ui/sheet"
+import { Menu } from 'lucide-react';
 const Navbar = () => {
     const Logo = () => {
         return (
@@ -43,18 +49,26 @@ const Navbar = () => {
                 </div>
                 <div className='md:hidden block'>
                     <Sheet>
-                        <SheetTrigger>Open</SheetTrigger>
+                        <SheetTrigger>
+                            <Menu />
+                        </SheetTrigger>
                         <SheetContent>
-                            <SheetHeader>
-                                <SheetTitle>Are you absolutely sure?</SheetTitle>
+                            <SheetHeader className={'pt-20'}>
                                 <SheetDescription>
-                                    This action cannot be undone. This will permanently delete your account
-                                    and remove your data from our servers.
+                                    <Logo />
+                                    <div className='pt-10'>
+                                        {navItems.map((item, i) => {
+                                            return (
+                                                <div className='border-b py-3'>
+                                                    <Link href={`${item.path}`} className={`${pathName === item.path ? 'text-primary' : 'text-black hover:text-primary duration-300'}`}>{item.name}</Link>
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
                                 </SheetDescription>
                             </SheetHeader>
                         </SheetContent>
                     </Sheet>
-                    {/* <Menu /> */}
                 </div>
             </div>
         </div>
