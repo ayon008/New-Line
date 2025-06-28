@@ -296,3 +296,44 @@ body {
   transform: translateY(-50%);
   left: 0px;
 }
+
+.sub-title {
+  position: relative;
+  width: fit-content;
+  margin: 0px auto;
+}
+
+.sub-title::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 4px;
+  right: -70px;
+  background-color: #007CFA;
+}
+
+.sub-title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 4px;
+  left: -70px;
+  background-color: #007CFA;
+}
+
+.service {
+  background-image: url('@/../public/service-bg-1-1.webp');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.swiper-slide {
+  overflow: visible !important;
+  max-width: 100%;
+  padding-top: 6px;
+}

@@ -6,6 +6,7 @@ import heroImage from '../../public/New Project (1).png'
 import image from '../../public/two-star.svg'
 import Features from "@/Shared/Features/Features";
 import About from "@/Shared/About/About";
+import Services from "@/Shared/Services/Services";
 
 const Svg1 = ({ className }) => {
   return (
@@ -57,6 +58,7 @@ export default function Home() {
       <div className="px-6 2xl:px-0">
         <About />
       </div>
+      <Services />
     </div>
   );
 }

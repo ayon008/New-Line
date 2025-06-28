@@ -5,11 +5,14 @@ import image3 from '../../../public/about-1-left.webp'
 import Image from 'next/image';
 import CountUp from 'react-countup';
 import PrimaryButton from '../Buttons/PrimaryButton';
-import { useInView } from 'framer-motion';
+import { useInView } from "motion/react"
 
 const About = () => {
-    const ref = useRef(null);
+    const ref  = useRef(null);
+    const refMobile = useRef(null);
+    const mobileView = useInView(refMobile, { once: true })
     const isInView = useInView(ref, { once: true });
+
     return (
         <div className='max-w-[1280px] mx-auto md:flex-row flex flex-col justify-between items-start md:gap-0 gap-10'>
             <div className='w-full md:w-[60%] relative'>
@@ -22,9 +25,11 @@ const About = () => {
                         <span className='text-4xl font-semibold text-secondary'>Years Of</span>
                     </div>
                     <div ref={ref} className='mt-20'>
+
                         {
-                            isInView ? <CountUp className='text-primary text-7xl font-semibold' start={0} end={16} duration={2.5} separator="" /> : null
+                            isInView && <CountUp className='text-primary text-7xl font-semibold' start={0} end={16} duration={2.5} separator="" />
                         }
+
                     </div>
                 </div>
             </div>
@@ -33,9 +38,9 @@ const About = () => {
                     <span className='text-base text-center'>Experience</span> <br />
                     <span className='text-4xl font-semibold text-center text-secondary'>Years Of</span>
                 </div>
-                <div ref={ref} className='text-center'>
+                <div ref={refMobile} className='text-center'>
                     {
-                        isInView ? <CountUp className='text-primary text-center text-7xl font-semibold' start={0} end={16} duration={2.5} separator="" /> : null
+                        mobileView ? <CountUp className='text-primary text-center text-7xl font-semibold' start={0} end={16} duration={2.5} separator="" /> : null
                     }
                 </div>
             </div>
