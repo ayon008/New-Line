@@ -326,7 +326,7 @@ body {
 }
 
 .service {
-  background-image: url('@/../public/service-bg-1-1.webp');
+  background-image: url('../../public/service-bg-1-1.webp');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
