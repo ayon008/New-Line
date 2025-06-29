@@ -31,7 +31,7 @@ export default function Home() {
       <div className="2xl:!h-[920px] md:!h-[720px] sm:!h-[705px] min-h-[800px] h-[710px] w-full banner-container flex flex-col relative">
         <div className="2xl:px-0 md:px-6 px-6 h-full flex flex-col md:pt-[150px] pt-[72px] max-w-[1290px] w-full mx-auto">
           <div className="md:my-auto md:space-y-6 space-y-4 md:p-0 py-20">
-            <p className="subheadline text-primary font-medium md:text-xl 2xl:text-2xl text-base md:text-left text-center">We Clean, You Shine</p>
+            <p className="subheadline xl:subheadline text-primary font-medium md:text-xl 2xl:text-2xl text-base md:text-left text-center">We Clean, You Shine</p>
             <h1 className={`md:text-6xl 2xl:text-7xl text-3xl font-semibold ${poppins.className} md:text-left text-center`}>Best Cleaning <br />
               Experience From <br className="md:block hidden" />
               Top Service</h1>

@@ -5,10 +5,11 @@ import image3 from '../../../public/about-1-left.webp'
 import Image from 'next/image';
 import CountUp from 'react-countup';
 import PrimaryButton from '../Buttons/PrimaryButton';
-import { useInView } from "motion/react"
+import { useInView } from "motion/react";
+import Modal from '../Modal/Modal';
 
 const About = () => {
-    const ref  = useRef(null);
+    const ref = useRef(null);
     const refMobile = useRef(null);
     const mobileView = useInView(refMobile, { once: true })
     const isInView = useInView(ref, { once: true });
@@ -16,7 +17,11 @@ const About = () => {
     return (
         <div className='max-w-[1280px] mx-auto md:flex-row flex flex-col justify-between items-start md:gap-0 gap-10'>
             <div className='w-full md:w-[60%] relative'>
-                <Image src={image} width={450} height={620} alt='about' className='mx-auto rounded-[50px]' />
+                <div className='w-fit relative mx-auto'>
+                    <Image src={image} width={450} height={620} alt='about' className='rounded-[50px]' />
+                    {/* <Image src={playImage} alt='' className='' /> */}
+                    <Modal />
+                </div>
                 <Image src={image2} alt='' width={200} height={240} className='absolute right-5 bottom-15 rounded-[30px] animation md:block hidden' />
                 <Image src={image3} alt='' width={200} height={240} className='absolute left-0 top-15 rounded-[30px] animation md:block hidden' />
                 <div className='md:flex hidden flex-col justify-center items-center absolute top-5 right-0'>
