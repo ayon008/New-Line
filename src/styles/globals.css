@@ -278,6 +278,19 @@ body {
   margin-left: 20px;
 }
 
+@media screen and (max-width:786px) {
+  .subheadline::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0px;
+    height: 4px;
+    background-color: #007CFA;
+    margin-left: 20px;
+  }
+}
+
 .service-list>li {
   position: relative;
   padding-left: 30px;
@@ -336,4 +349,9 @@ body {
   overflow: visible !important;
   max-width: 100%;
   padding-top: 6px;
+}
+
+
+body:has([data-state='open']) {
+  overflow: hidden !important;
 }

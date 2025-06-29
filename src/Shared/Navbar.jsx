@@ -18,7 +18,9 @@ export const Nav = () => {
     const Logo = () => {
         return (
             <div>
-                <Image src={logo} width={213} className='md:w-[213px] w-[180px]' height={60} alt='logo-new-cleaning' />
+                <Link href={'/'}>
+                    <Image src={logo} width={213} className='md:w-[213px] w-[180px]' height={60} alt='logo-new-cleaning' />
+                </Link>
             </div>
         )
     }

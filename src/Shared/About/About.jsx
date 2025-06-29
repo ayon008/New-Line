@@ -19,7 +19,6 @@ const About = () => {
             <div className='w-full md:w-[60%] relative'>
                 <div className='w-fit relative mx-auto'>
                     <Image src={image} width={450} height={620} alt='about' className='rounded-[50px]' />
-                    {/* <Image src={playImage} alt='' className='' /> */}
                     <Modal />
                 </div>
                 <Image src={image2} alt='' width={200} height={240} className='absolute right-5 bottom-15 rounded-[30px] animation md:block hidden' />
