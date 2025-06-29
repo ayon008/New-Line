@@ -1,24 +1,52 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import image from '../../../public/about-1-main.webp'
 import image2 from '../../../public/about-1-right.webp'
 import image3 from '../../../public/about-1-left.webp'
 import Image from 'next/image';
 import CountUp from 'react-countup';
 import PrimaryButton from '../Buttons/PrimaryButton';
-import { useInView } from "motion/react";
+import { useInView, useSpring, useTransform } from "motion/react";
 import Modal from '../Modal/Modal';
+import { motion } from 'motion/react'
 
 const About = () => {
     const ref = useRef(null);
     const refMobile = useRef(null);
     const mobileView = useInView(refMobile, { once: true })
     const isInView = useInView(ref, { once: true });
+    const [bounds, setBounds] = useState(null);
+    const mouseX = useSpring(0, { stiffness: 200, damping: 30 });
+    const mouseY = useSpring(0, { stiffness: 200, damping: 30 });
+
+    // Example: map mouseX to rotateY between -15 and 15 degrees
+    const rotateY = useTransform(mouseX, [0, bounds?.width || 0], [-15, 15]);
+    // Example: map mouseY to rotateX between 15 and -15 degrees
+    const rotateX = useTransform(mouseY, [0, bounds?.height || 0], [15, -15]);
 
     return (
         <div className='max-w-[1280px] mx-auto md:flex-row flex flex-col justify-between items-start md:gap-0 gap-10'>
             <div className='w-full md:w-[60%] relative'>
                 <div className='w-fit relative mx-auto'>
-                    <Image src={image} width={450} height={620} alt='about' className='rounded-[50px]' />
+                    <motion.div
+                        ref={(ref) => setBounds(ref?.getBoundingClientRect())}
+                        onMouseMove={(e) => {
+                            if (!bounds) return;
+                            mouseX.set(e.clientX - bounds.left);
+                            mouseY.set(e.clientY - bounds.top);
+                        }}
+                        onMouseLeave={() => {
+                            // Reset mouse position to center on leave
+                            mouseX.set(bounds?.width / 2 || 0);
+                            mouseY.set(bounds?.height / 2 || 0);
+                        }}
+                        style={{
+                            rotateX,
+                            rotateY,
+                            perspective: 800,
+                        }}
+                    >
+                        <Image src={image} width={450} height={620} alt='about' className='rounded-[50px]' />
+                    </motion.div>
                     <Modal />
                 </div>
                 <Image src={image2} alt='' width={200} height={240} className='absolute right-5 bottom-15 rounded-[30px] animation md:block hidden' />

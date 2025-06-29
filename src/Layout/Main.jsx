@@ -1,15 +1,15 @@
 import Navbar, { Nav } from '@/Shared/Navbar';
 import NavComponent from '@/Shared/NavComponent';
 import React, { useEffect, useState } from 'react';
-import { Montserrat } from 'next/font/google';
 import { motion } from 'motion/react'
+import { Archivo } from 'next/font/google';
 
-const montserrat = Montserrat({
-    subsets: ['latin'],
-    weight: ['400', '700'], // choose weights you need
-    variable: '--font-montserrat', // optional CSS variable
+const archivo = Archivo({
+  subsets: ['latin'], // or ['latin-ext'] if needed
+  weight: ['400', '500', '600', '700'], // choose what weights you need
+  variable: '--font-archivo', // optional: useful for Tailwind config
+  display: 'swap', // optional
 });
-
 
 
 const Main = ({ children }) => {
@@ -29,7 +29,7 @@ const Main = ({ children }) => {
     }, []);
 
     return (
-        <div className={`${montserrat.className}`}>
+        <div className={`${archivo.className}`}>
             <div className='absolute right-0 left-0 top-0 z-50 bg-white md:rounded-bl-[50px] md:rounded-br-[50px] rounded-br-[8px] rounded-bl-[8px]'>
                 <NavComponent />
                 <Navbar />

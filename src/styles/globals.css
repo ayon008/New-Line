@@ -352,6 +352,6 @@ body {
 }
 
 
-body:has([data-state='open']) {
-  overflow: hidden !important;
+[data-state='open'] {
+  @apply !overflow-hidden
 }

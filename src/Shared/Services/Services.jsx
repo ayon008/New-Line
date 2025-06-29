@@ -39,12 +39,12 @@ const Services = () => {
         )
     }
     return (
-        <div className='my-20 2xl:px-0 service py-24'>
+        <div className='mt-20 2xl:px-0 service py-24'>
             <div>
                 <p className='text-primary text-center font-semibold md:text-base text-sm sub-title'>Our Services</p>
                 <h2 className='text-center text-black text-4xl font-semibold mt-4'>The Services We Provide For <br />
                     <span className='text-primary'>Our Customer</span></h2>
-                <div className='relative max-w-[1760px] w-full mx-auto'>
+                <div className='relative max-w-[1760px] w-full mx-auto group/service'>
                     <div className='max-w-[1280px] mx-auto px-6 2xl:px-0 pt-10'>
                         <Swiper
                             spaceBetween={30}
@@ -93,11 +93,11 @@ const Services = () => {
                         </Swiper>
                     </div>
                     <Button
-                        className="absolute top-1/2 left-5 -translate-y-1/2 z-10 p-0 rounded-full bg-primary hidden 2xl:flex items-center justify-center w-12 h-12 swiper-button-prev-custom"
+                        className="absolute top-1/2 left-5 -translate-y-1/2 z-10 p-0 rounded-full bg-primary hidden 2xl:flex items-center justify-center w-12 h-12 swiper-button-prev-custom opacity-0 group-hover/service:opacity-100 transition-all duration-200"
                     >
                         <ArrowLeft className="w-5 h-5 text-white" />
                     </Button>
-                    <Button className={'absolute top-1/2 right-5 -translate-y-1/2 z-10 p-0 rounded-full bg-primary hidden 2xl:flex items-center justify-center w-12 h-12 swiper-button-next-custom'}>
+                    <Button className={'absolute top-1/2 right-5 -translate-y-1/2 z-10 p-0 rounded-full bg-primary hidden 2xl:flex items-center justify-center w-12 h-12 swiper-button-next-custom opacity-0 group-hover/service:opacity-100 transition-all duration-200'}>
                         <ArrowRight />
                     </Button>
                 </div>

@@ -1,4 +1,3 @@
-import { poppins } from "@/fonts/Poppins";
 import PrimaryButton from "@/Shared/Buttons/PrimaryButton";
 import SecondaryButton from "@/Shared/Buttons/SecondaryButton";
 import Image from "next/image";
@@ -7,8 +6,11 @@ import image from '../../public/two-star.svg'
 import Features from "@/Shared/Features/Features";
 import About from "@/Shared/About/About";
 import Services from "@/Shared/Services/Services";
+import Marquees from "@/Shared/Marquee/Marquee";
+import Choose from "@/Shared/Choose Us/Choose";
+import Brand from "@/Shared/Brands/Brand";
 
-const Svg1 = ({ className }) => {
+export const Svg1 = ({ className }) => {
   return (
     <svg className={`${className}`} width="91" height="97" viewBox="0 0 91 97" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M31 0L34.3852 16.0217C37.4898 30.7151 47.9156 42.7883 62 48C47.9259 53.2079 37.532 65.305 34.5029 80.0028L31 97L27.4971 80.0028C24.468 65.305 14.0741 53.2079 0 48C14.0844 42.7883 24.5102 30.7151 27.6148 16.0217L31 0Z" fill="#007CFA" />
@@ -19,7 +21,7 @@ const Svg1 = ({ className }) => {
   )
 }
 
-const Svg2 = ({ className }) => {
+export const Svg2 = ({ className }) => {
   return (
     <Image className={className} alt="" src={image} />
   )
@@ -30,9 +32,9 @@ export default function Home() {
     <div>
       <div className="2xl:!h-[920px] md:!h-[720px] sm:!h-[705px] min-h-[800px] h-[710px] w-full banner-container flex flex-col relative">
         <div className="2xl:px-0 md:px-6 px-6 h-full flex flex-col md:pt-[150px] pt-[72px] max-w-[1290px] w-full mx-auto">
-          <div className="md:my-auto md:space-y-6 space-y-4 md:p-0 py-20">
-            <p className="subheadline xl:subheadline text-primary font-medium md:text-xl 2xl:text-2xl text-base md:text-left text-center">We Clean, You Shine</p>
-            <h1 className={`md:text-6xl 2xl:text-7xl text-3xl font-semibold ${poppins.className} md:text-left text-center`}>Best Cleaning <br />
+          <div className="md:my-auto md:space-y-6 space-y-5 md:p-0 py-20">
+            <p className="subheadline xl:subheadline text-primary font-medium md:text-xl 2xl:text-2xl text-xl md:text-left text-center">We Clean, You Shine</p>
+            <h1 className={`md:text-6xl 2xl:text-7xl text-4xl font-semibold md:text-left text-center`}>Best Cleaning <br />
               Experience From <br className="md:block hidden" />
               Top Service</h1>
             <div className="flex gap-4 items-center md:justify-start justify-center relative">
@@ -46,7 +48,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Image width={872} height={733} className="absolute z-10 md:right-[2%] bottom-0 2xl:w-[872px] 2xl:h-[733px] md:w-[650px] md:h-[546px] w-[450px]" src={heroImage} alt="hero-image" />
+        <Image width={872} height={733} priority className="absolute z-10 md:right-[2%] bottom-0 2xl:w-[872px] 2xl:h-[733px] md:w-[650px] md:h-[546px] w-[450px]" src={heroImage} alt="hero-image" />
         <Svg1 className={'absolute bottom-0 left-[5%] 2xl:block hidden top-[20%] animation-side'} />
         <Svg2 className={'absolute md:left-[5%] left-[5px] bottom-[3%] animation'} />
         <Svg2 className={'absolute right-[1%] md:top-[30%] top-[15%] animation'} />
@@ -59,6 +61,11 @@ export default function Home() {
         <About />
       </div>
       <Services />
+      <div className="mb-20">
+        <Marquees />
+      </div>
+      <Choose />
+      <Brand />
     </div>
   );
 }
