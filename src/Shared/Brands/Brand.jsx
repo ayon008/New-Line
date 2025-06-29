@@ -21,13 +21,16 @@ const Brand = () => {
                     className='mt-10'
                     breakpoints={{
                         0: {
-                            slidesPerView: 3,  // from 0px up to 585px (basically mobile)
+                            slidesPerView: 3,
+                            spaceBetween: 20  // from 0px up to 585px (basically mobile)
                         },
                         586: {
-                            slidesPerView: 4,  // from 586px up to (next breakpoint - 1)
+                            slidesPerView: 4,
+                            spaceBetween: 40  // from 586px up to (next breakpoint - 1)
                         },
                         1024: {
-                            slidesPerView: 5,  // from 1024px and up
+                            slidesPerView: 5,
+                            spaceBetween: 80  // from 1024px and up
                         },
                     }}
                 >
