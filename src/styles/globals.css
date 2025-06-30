@@ -495,3 +495,10 @@ body {
   z-index: 0;
   overflow: hidden;
 }
+
+.contact-form {
+  background-image: url('../../public/contact_form_bg.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+}
