@@ -438,3 +438,26 @@ body {
   z-index: -2;
   border-radius: 50px;
 }
+
+.footer {
+  background-image: url('../../public/footer_bg_1.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.footer-headline {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-headline::after {
+  position: absolute;
+  content: '';
+  bottom: 0px;
+  width: 80px;
+  background-color: #FFC702;
+  left: 0px;
+  z-index: 1;
+  height: 2px;
+}

@@ -14,6 +14,7 @@ import Process from "@/Shared/Process/Process";
 import States from "@/Shared/States/States";
 import Contact from "@/Shared/Contact/Contact";
 import Testimonial from "@/Shared/Testimonial/Testimonial";
+import Footer from "@/Shared/Footer/Footer";
 
 export const Svg1 = ({ className }) => {
   return (
@@ -76,6 +77,7 @@ export default function Home() {
       <States />
       <Contact />
       <Testimonial />
+      <Footer />
     </div>
   );
 }

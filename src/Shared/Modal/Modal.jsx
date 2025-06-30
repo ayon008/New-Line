@@ -48,9 +48,7 @@ const Modal = () => {
                 <DialogContent className="!w-[90%] !mx-auto !max-w-[750px] !p-0 !m-0 !bg-black [&>button]:hidden">
                     <div className='aspect-video w-full'>
                         <iframe
-                            width="100%"
-                            height="400"
-                            className="!w-full"
+                            className="w-full h-full"
                             src="https://www.youtube.com/embed/tmkHzlX_kyg"
                             title="YouTube video player"
                             frameBorder="0"

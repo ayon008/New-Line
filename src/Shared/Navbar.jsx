@@ -14,16 +14,16 @@ import {
 import { Menu } from 'lucide-react';
 
 
+export const Logo = () => {
+    return (
+        <div>
+            <Link href={'/'}>
+                <Image src={logo} priority width={213} className='md:w-[213px] w-[180px]' height={60} alt='logo-new-cleaning' />
+            </Link>
+        </div>
+    )
+}
 export const Nav = () => {
-    const Logo = () => {
-        return (
-            <div>
-                <Link href={'/'}>
-                    <Image src={logo} priority width={213} className='md:w-[213px] w-[180px]' height={60} alt='logo-new-cleaning' />
-                </Link>
-            </div>
-        )
-    }
     const navItems = [
         { path: '/', name: 'Home' },
         { path: '/contact', name: 'Contact' },
