@@ -11,7 +11,7 @@ import Brand from '@/Shared/Brands/Brand';
 export const Banner = ({ name, breadcum }) => {
     return (
         <div className='w-full md:h-[610px] h-[428px] banner md:pt-[90px] pt-0 relative flex items-center md:pl-20 pl-10'>
-            <Image priority fill src={banner_image} className='bottom-0 left-0 right-0 absolute h-[80px] object-cover' alt='' />
+            <Image priority src={banner_image} className='bottom-0 left-0 right-0 absolute h-[80px] object-cover' alt='' />
             <div className='w-fit'>
                 <h1 className='md:text-7xl text-5xl'>{name}</h1>
                 <p className='mt-2 text-xl font-semibold'>{breadcum}</p>
