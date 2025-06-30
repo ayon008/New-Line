@@ -50,6 +50,7 @@ const Modal = () => {
                         <iframe
                             width="100%"
                             height="400"
+                            className="!w-full"
                             src="https://www.youtube.com/embed/tmkHzlX_kyg"
                             title="YouTube video player"
                             frameBorder="0"

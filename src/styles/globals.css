@@ -422,3 +422,19 @@ body {
   opacity: 1;
   overflow: hidden;
 }
+
+.testimonial {
+  position: relative;
+}
+
+.testimonial::before {
+  position: absolute;
+  content: '';
+  left: 0px;
+  bottom: 0px;
+  top: 0px;
+  width: 900px;
+  background-color: #F6F6F6;
+  z-index: -2;
+  border-radius: 50px;
+}

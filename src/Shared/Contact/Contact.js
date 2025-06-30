@@ -10,7 +10,7 @@ const Contact = () => {
                     <p className='text-[#FFC705] text-center font-semibold md:text-base text-sm secondary-title'>WORK WITH US</p>
                 </div>
                 <div>
-                    <h2 className='text-center text-white md:text-4xl text-3xl font-semibold mt-4'>Contact Our World Best <br className='md:block hidden' /> Cleaning Services Team!</h2>
+                    <h2 className='text-center text-white md:text-4xl text-2xl font-semibold mt-4'>Contact Our World Best <br className='md:block hidden' /> Cleaning Services Team!</h2>
                 </div>
                 <div className='w-fit mx-auto border-4 rounded-[80px] border-white'>
                     <PrimaryButton text={'Contact Us'} />
