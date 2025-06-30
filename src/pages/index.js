@@ -11,6 +11,7 @@ import Choose from "@/Shared/Choose Us/Choose";
 import Brand from "@/Shared/Brands/Brand";
 import Team from "@/Shared/Team/Team";
 import Process from "@/Shared/Process/Process";
+import States from "@/Shared/States/States";
 
 export const Svg1 = ({ className }) => {
   return (
@@ -70,6 +71,7 @@ export default function Home() {
       <Brand />
       <Team />
       <Process />
+      <States />
     </div>
   );
 }

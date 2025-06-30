@@ -9,7 +9,7 @@ const Process = () => {
                 <p className='subheadline font-semibold md:text-base text-sm text-primary md:text-left text-center'>Work Process</p>
                 <h2 className={`2xl:text-6xl md:text-5xl text-3xl font-semibold md:text-left text-center`}>How We Are Working!</h2>
             </div>
-            <div className='grid md:grid-cols-4 grid-cols-1 mt-14 relative'>
+            <div className='grid md:grid-cols-4 grid-cols-1 mt-14 relative md:gap-0 gap-10'>
                 <Image src={line} alt='line' className='absolute md:block hidden left-[18%] top-4 !z-[-1]' />
                 <Image src={line} alt='line' className='absolute md:block hidden right-[18%] top-4 !z-[-1]' />
                 <Image src={line} alt='line' className='absolute md:block hidden left-1/2 -translate-x-1/2 rotate-[140deg] top-4 !z-[-1]' />
