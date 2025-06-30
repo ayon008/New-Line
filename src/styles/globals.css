@@ -316,6 +316,45 @@ body {
   margin: 0px auto;
 }
 
+.secondary-title {
+  position: relative;
+  width: fit-content;
+  margin: 0px auto;
+}
+
+.secondary-title::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 4px;
+  right: -70px;
+  background-color: white;
+}
+
+.secondary-title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 4px;
+  left: -70px;
+  background-color: white;
+}
+
+.sub-title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 4px;
+  left: -70px;
+  background-color: white;
+}
+
 .sub-title::before {
   content: '';
   position: absolute;
@@ -351,7 +390,35 @@ body {
   padding-top: 6px;
 }
 
+body {
+  overflow-x: hidden !important;
+}
 
-[data-state='open'] {
-  @apply !overflow-hidden
+.team {
+  background-image: url(../../public/team-bg-1.webp);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.team-card-image {
+  position: relative;
+}
+
+.team-card-image::after {
+  content: '';
+  position: absolute;
+  inset: 0px;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  transition: opacity 0.3s linear;
+  overflow: hidden;
+  border-radius: 30px;
+  scale: 1;
+}
+
+.team-card:hover .team-card-image::after {
+  opacity: 1;
+  overflow: hidden;
 }

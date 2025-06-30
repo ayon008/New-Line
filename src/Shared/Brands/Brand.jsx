@@ -10,7 +10,7 @@ import { Autoplay } from 'swiper/modules';
 
 const Brand = () => {
     return (
-        <div className='max-w-[1280px] mx-auto my-20'>
+        <div className='max-w-[1280px] mx-auto my-20 2xl:px-0 px-6'>
             <div className='bg-[#F7F7F7] py-10 px-16 rounded-[20px]'>
                 <h3 className='text-2xl font-semibold text-center'>Trusted by over <span className='text-primary'>90k+</span> companies worldwide</h3>
                 <Swiper

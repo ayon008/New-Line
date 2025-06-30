@@ -44,7 +44,7 @@ const Services = () => {
                 <p className='text-primary text-center font-semibold md:text-base text-sm sub-title'>Our Services</p>
                 <h2 className='text-center text-black text-4xl font-semibold mt-4'>The Services We Provide For <br />
                     <span className='text-primary'>Our Customer</span></h2>
-                <div className='relative max-w-[1760px] w-full mx-auto group/service'>
+                <div className='relative max-w-[1760px] w-full mx-auto group/service overflow-hidden'>
                     <div className='max-w-[1280px] mx-auto px-6 2xl:px-0 pt-10'>
                         <Swiper
                             spaceBetween={30}
