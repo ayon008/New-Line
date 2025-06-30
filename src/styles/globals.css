@@ -468,3 +468,30 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.work-process {
+  background-image: url('../../public/why-3-bg.webp');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.review {
+  position: relative;
+  z-index: 5;
+}
+
+.review::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  background-image: url('/testimonials-bg-3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  overflow: hidden;
+}

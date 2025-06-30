@@ -60,18 +60,18 @@ export const TestimonialSlide = () => {
                             slidesPerView: 3,  // from 1024px and up
                         },
                     }}
-                    className='mt-10 rounded-[30px]' 
+                    className='mt-10 rounded-[30px]'
                 >
-                    <SwiperSlide>
+                    <SwiperSlide className='md:p-2 p-[2px]'>
                         <TestimonialCard image={testimonial_1} />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='md:p-2 p-[2px]'>
                         <TestimonialCard image={testimonial_3} />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='md:p-2 p-[2px]'>
                         <TestimonialCard image={testimonial_4} />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='md:p-2 p-[2px]'>
                         <TestimonialCard image={testimonial_1} />
                     </SwiperSlide>
                 </Swiper>

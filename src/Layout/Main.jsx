@@ -3,6 +3,7 @@ import NavComponent from '@/Shared/NavComponent';
 import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react'
 import { Archivo } from 'next/font/google';
+import Footer from '@/Shared/Footer/Footer';
 
 const archivo = Archivo({
     subsets: ['latin'], // or ['latin-ext'] if needed
@@ -41,6 +42,7 @@ const Main = ({ children }) => {
                 <Nav />
             </motion.div>
             {children}
+            <Footer />
         </div>
     );
 };
