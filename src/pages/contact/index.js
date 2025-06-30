@@ -53,17 +53,20 @@ const contact = () => {
                     </div>
                 </div>
                 <div className='contact-form mt-20'>
-                    <div className='md:w-1/2 w-full bg-[#F7F7F7] rounded-[30px] p-20'>
-                        <h1 className='font-semibold text-5xl mb-10'>Get In Touch</h1>
+                    <div className='md:w-1/2 w-full bg-[#F7F7F7] rounded-[30px] md:p-16 p-6'>
+                        <h1 className='font-semibold md:text-5xl text-3xl md:text-left text-center mb-10'>Get In Touch</h1>
                         <form>
-                            <div className='grid grid-cols-2 gap-6'>
+                            <div className='grid md:grid-cols-2 grid-cols-1 gap-6'>
                                 <Input className={'p-8 rounded-[30px] bg-white'} type={'text'} placeholder='Your Name' />
                                 <Input className={'p-8 rounded-[30px] bg-white'} type={'email'} placeholder='Email Address' />
                                 <Input className={'p-8 rounded-[30px] bg-white'} type={'text'} placeholder='Phone Number' />
                                 <Input className={'p-8 rounded-[30px] bg-white'} type={'text'} placeholder='Subject' />
                             </div>
                             <div className='my-6'>
-                                <Textarea placeholder='Your Message' />
+                                <Textarea
+                                    placeholder="Your Message"
+                                    className="min-h-[150px] resize-none"
+                                />
                             </div>
                             <div className='mx-auto w-fit'>
                                 <PrimaryButton text={'Submit Message'} />

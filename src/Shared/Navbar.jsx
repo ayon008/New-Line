@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../../public/828e82de-b777-4fda-bb35-cf5b54409638-removebg-preview.png'
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -31,6 +31,10 @@ export const Nav = () => {
         { path: '/services', name: 'Services' }
     ]
     const pathName = useRouter().asPath;
+    const [open, setOpen] = useState(false);
+    useEffect(() => {
+        setOpen(false)
+    }, [pathName])
     return (
         <div className='max-w-[1280px] w-full mx-auto px-6 2xl:px-0 flex items-center justify-between overflow-hidden'>
             <Logo />
@@ -47,7 +51,7 @@ export const Nav = () => {
                 <PrimaryButton text={'get a quote'} />
             </div>
             <div className='md:hidden block'>
-                <Sheet>
+                <Sheet open={open} onOpenChange={setOpen}>
                     <SheetTrigger>
                         <Menu />
                     </SheetTrigger>

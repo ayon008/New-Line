@@ -8,36 +8,39 @@ import Image from 'next/image';
 import image1 from '../../../public/service-1-1.webp'
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
-const Services = () => {
-    const ServiceCard = () => {
-        return (
-            <div className='bg-white rounded-[30px] z-10 md:p-8 p-4 group hover:-translate-y-[4px] translate-y-0 transition-all duration-300 ease-in'>
-                <div className='flex justify-between items-center'>
-                    <div className='bg-secondary w-fit rounded-3xl flex items-center gap-1 py-2 px-3'>
-                        <PercentCircle className='w-5 h-5' />
-                        <p>Discount 50%</p>
-                    </div>
-                    <div>
+import Link from 'next/link';
+
+export const ServiceCard = () => {
+    return (
+        <div className='bg-white rounded-[30px] z-10 md:p-8 p-4 group hover:-translate-y-[4px] translate-y-0 transition-all duration-300 ease-in'>
+            <div className='flex justify-between items-center'>
+                <div className='bg-secondary w-fit rounded-3xl flex items-center gap-1 py-2 px-3'>
+                    <PercentCircle className='w-5 h-5' />
+                    <p>Discount 50%</p>
+                </div>
+                <div>
+                    <Link href={'/contact'}>
                         <Button className="!px-6 !rounded-[30px] bg-primary hover:!bg-secondary transition-all duration-300 ease-in group/mybtn">
                             <ArrowRight className="!w-6 !h-6 text-white group-hover/mybtn:text-black transition-colors duration-100" />
                         </Button>
-
-                    </div>
-                </div>
-                <div className='md:mt-10 mt-6'>
-                    <div className='overflow-hidden rounded-tl-[20px] rounded-tr-[20px]'>
-                        <Image src={image1} className='w-full h-auto group-hover:scale-110 transition-all duration-300 ease-in' alt='' />
-                    </div>
-                    <div className='bg-[#E7F3FF] p-6 rounded-bl-[20px] rounded-br-[20px]'>
-                        <h3 className='text-2xl font-medium'>Home Cleaning</h3>
-                        <p className='text-sm mt-2 text-secondary'>We bring the shine, you enjoy the comfort.
-                            Professional home cleaning made easy.
-                        </p>
-                    </div>
+                    </Link>
                 </div>
             </div>
-        )
-    }
+            <div className='md:mt-10 mt-6'>
+                <div className='overflow-hidden rounded-tl-[20px] rounded-tr-[20px]'>
+                    <Image src={image1} className='w-full h-auto group-hover:scale-110 transition-all duration-300 ease-in' alt='' />
+                </div>
+                <div className='bg-[#E7F3FF] p-6 rounded-bl-[20px] rounded-br-[20px]'>
+                    <h3 className='text-2xl font-medium'>Home Cleaning</h3>
+                    <p className='text-sm mt-2 text-secondary'>We bring the shine, you enjoy the comfort.
+                        Professional home cleaning made easy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    )
+}
+const Services = () => {
     return (
         <div className='mt-20 2xl:px-0 service py-24'>
             <div>
