@@ -10,6 +10,7 @@ import Marquees from "@/Shared/Marquee/Marquee";
 import Choose from "@/Shared/Choose Us/Choose";
 import Brand from "@/Shared/Brands/Brand";
 import Team from "@/Shared/Team/Team";
+import Process from "@/Shared/Process/Process";
 
 export const Svg1 = ({ className }) => {
   return (
@@ -68,6 +69,7 @@ export default function Home() {
       <Choose />
       <Brand />
       <Team />
+      <Process />
     </div>
   );
 }
