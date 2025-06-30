@@ -116,7 +116,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <Image src={footer_Image} className='absolute z-10 -left-2 right-0 bottom-0 h-[120px] object-cover' alt="Footer image" />
+            <Image src={footer_Image} className='absolute z-10 right-0 left-0 bottom-0 h-[120px] object-cover' alt="Footer image" />
             <p className='bottom-4 left-1/2 -translate-x-1/2 z-20 absolute md:text-base text-xs text-center'>Copyright © 2025 <a href="https://portfolio-lake-five-93.vercel.app/" className='text-primary'>Shariar Ayon</a>. All Rights Reserved.</p>
         </div>
     );
