@@ -1,7 +1,9 @@
 import React from 'react';
 import { Logo } from '../Navbar';
-import { ArrowRight, Facebook, Instagram, MapPin, Phone, Twitter } from 'lucide-react';
+import { ArrowRight, Facebook, Instagram, MapPin, Phone, Send, Twitter } from 'lucide-react';
 import Link from 'next/link';
+import { Input } from "@/components/ui/input"
+import { Button } from '@/components/ui/button';
 
 const Footer = () => {
     return (
@@ -49,7 +51,7 @@ const Footer = () => {
                     <div>
                         <h3 className='footer-headline text-2xl text-white font-semibold'>Quick Links</h3>
                         <div className='mt-10 space-y-4'>
-                            <div>
+                            <div className='w-fit'>
                                 <Link href={'/about'}>
                                     <div className='flex items-center gap-2 group/footer'>
                                         <ArrowRight className='text-[#FFC702] -rotate-[45deg] group-hover/footer:rotate-0 transition-all duration-200 ease-in' />
@@ -57,7 +59,7 @@ const Footer = () => {
                                     </div>
                                 </Link>
                             </div>
-                            <div>
+                            <div className='w-fit'>
                                 <Link href={'/contact'}>
                                     <div className='flex items-center gap-2 group/footer'>
                                         <ArrowRight className='text-[#FFC702] -rotate-[45deg] group-hover/footer:rotate-0 transition-all duration-200 ease-in' />
@@ -65,7 +67,7 @@ const Footer = () => {
                                     </div>
                                 </Link>
                             </div>
-                            <div>
+                            <div className='w-fit'>
                                 <Link href={'/services'}>
                                     <div className='flex items-center gap-2 group/footer'>
                                         <ArrowRight className='text-[#FFC702] -rotate-[45deg] group-hover/footer:rotate-0 transition-all duration-200 ease-in' />
@@ -86,7 +88,7 @@ const Footer = () => {
                                 { name: 'Gas Line Services', href: '/services/gas-line-services' },
                                 { name: 'Bathroom Services', href: '/services/bathroom-services' },
                             ].map((service, index) => (
-                                <div>
+                                <div className='w-fit'>
                                     <Link key={index} href={service.href}>
                                         <div className='flex items-center gap-2 group/footer'>
                                             <ArrowRight className='text-[#FFC702] -rotate-[45deg] group-hover/footer:rotate-0 transition-all duration-200 ease-in' />
@@ -102,7 +104,14 @@ const Footer = () => {
                     <div>
                         <h3 className='footer-headline text-2xl text-white font-semibold'>News Letter</h3>
                         <p className='text-white text-sm my-6'>Subscribe to our Newsletter</p>
-
+                        <div>
+                            <form className='bg-white relative rounded-[30px] p-1'>
+                                <Input className={'bg-white py-6 rounded-[30px] pr-24'} type="email" placeholder="Email" />
+                                <Button type={'submit'} className={'py-6 !px-8 rounded-[30px] absolute right-1 top-1/2 -translate-y-1/2'}>
+                                    <Send className='' />
+                                </Button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
