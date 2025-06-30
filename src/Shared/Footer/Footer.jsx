@@ -4,11 +4,12 @@ import { ArrowRight, Facebook, Instagram, MapPin, Phone, Send, Twitter } from 'l
 import Link from 'next/link';
 import { Input } from "@/components/ui/input"
 import { Button } from '@/components/ui/button';
-
+import Image from 'next/image';
+import footer_Image from '../../../public/footer.jpg'
 const Footer = () => {
     return (
-        <div className='footer'>
-            <div className='max-w-[1280px] w-full mx-auto 2xl:px-0 px-6 py-20'>
+        <div className='footer relative'>
+            <div className='max-w-[1280px] w-full mx-auto 2xl:px-0 px-6 pt-20 pb-40'>
                 <div className='flex items-center justify-between md:flex-row flex-col gap-10 w-full bg-white/10 backdrop-blur-3xl border border-white/20 rounded-[40px] px-10 py-4'>
                     <Logo />
                     <div className='flex items-center gap-10 text-white'>
@@ -115,6 +116,8 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            <Image src={footer_Image} className='absolute z-10 -left-2 right-0 bottom-0 h-[120px] object-cover' alt="Footer image" />
+            <p className='bottom-4 left-1/2 -translate-x-1/2 z-20 absolute md:text-base text-xs text-center'>Copyright © 2025 <a href="https://portfolio-lake-five-93.vercel.app/" className='text-primary'>Shariar Ayon</a>. All Rights Reserved.</p>
         </div>
     );
 };
