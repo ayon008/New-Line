@@ -12,7 +12,7 @@ const Contact = () => {
                 <div>
                     <h2 className='text-center text-white md:text-4xl text-2xl font-semibold mt-4'>Contact Our World Best <br className='md:block hidden' /> Cleaning Services Team!</h2>
                 </div>
-                <div className='w-fit mx-auto border-4 rounded-[80px] border-white'>
+                <div className='w-fit h-fit mx-auto border-4 rounded-[80px] border-white'>
                     <PrimaryButton text={'Contact Us'} />
                 </div>
                 <Image src={image1} alt='half-circle' className='position absolute right-12 animation-side top-0 !z-10 md:block hidden'/>
