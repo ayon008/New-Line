@@ -8,6 +8,7 @@ import PrimaryButton from '../Buttons/PrimaryButton';
 import { useInView, useSpring, useTransform } from "motion/react";
 import Modal from '../Modal/Modal';
 import { motion } from 'motion/react'
+import Link from 'next/link';
 
 const About = () => {
     const ref = useRef(null);
@@ -96,7 +97,9 @@ const About = () => {
                         <li>Flexible weekly or one-time visits</li>
                     </ul>
                     <div className='mt-8'>
-                        <PrimaryButton text={'Discover More'} />
+                        <Link href={'/contact'}>
+                            <PrimaryButton text={'Discover More'} />
+                        </Link>
                     </div>
                 </div>
             </div>
