@@ -10,12 +10,59 @@ import Link from 'next/link';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import PrimaryButton from '@/Shared/Buttons/PrimaryButton';
+import Swal from 'sweetalert2';
+import { useForm } from 'react-hook-form';
 
 const Index = () => {
     const { slug } = useRouter().query;
     console.log(slug);
     const service = services.find((s) => s.slug === slug);
     console.log(service);
+
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors },
+    } = useForm();
+
+    const onSubmit = async (data) => {
+        Swal.fire({
+            title: 'Sending your message...',
+            allowOutsideClick: false,
+            didOpen: () => {
+                Swal.showLoading();
+            },
+        });
+
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
+
+            Swal.close();
+
+            if (res.ok) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Message Sent!',
+                    text: 'We’ll get back to you shortly.',
+                });
+                reset();
+            } else {
+                throw new Error('Something went wrong');
+            }
+        } catch (error) {
+            Swal.close();
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops!',
+                text: error.message || 'Failed to send message.',
+            });
+        }
+    };
 
 
     return (
@@ -110,21 +157,82 @@ const Index = () => {
                     </div>
                     <div className='bg-[#F6F6F6] p-10 rounded-[30px] mt-10'>
                         <h2 className='text-2xl font-semibold text-black mb-10'>Contact Us</h2>
-                        <form>
-                            <div className='grid grid-cols-1 gap-6'>
-                                <Input className={'p-8 rounded-[30px] bg-white'} type={'text'} placeholder='Your Name' />
-                                <Input className={'p-8 rounded-[30px] bg-white'} type={'email'} placeholder='Email Address' />
-                                <Input className={'p-8 rounded-[30px] bg-white'} type={'text'} placeholder='Phone Number' />
-                                <Input className={'p-8 rounded-[30px] bg-white'} type={'text'} placeholder='Subject' />
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <div className="grid grid-cols-1 gap-6">
+                                <div>
+                                    <Input
+                                        {...register('name', { required: 'Name is required' })}
+                                        className="p-8 rounded-[30px] bg-white"
+                                        type="text"
+                                        placeholder="Your Name"
+                                    />
+                                    {errors.name && (
+                                        <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
+                                    )}
+                                </div>
+
+                                <div>
+                                    <Input
+                                        {...register('email', {
+                                            required: 'Email is required',
+                                            pattern: {
+                                                value: /^\S+@\S+$/i,
+                                                message: 'Invalid email address',
+                                            },
+                                        })}
+                                        className="p-8 rounded-[30px] bg-white"
+                                        type="email"
+                                        placeholder="Email Address"
+                                    />
+                                    {errors.email && (
+                                        <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                                    )}
+                                </div>
+
+                                <div>
+                                    <Input
+                                        {...register('phone', {
+                                            required: 'Phone number is required',
+                                            minLength: {
+                                                value: 10,
+                                                message: 'Phone number must be at least 10 digits',
+                                            },
+                                        })}
+                                        className="p-8 rounded-[30px] bg-white"
+                                        type="text"
+                                        placeholder="Phone Number"
+                                    />
+                                    {errors.phone && (
+                                        <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
+                                    )}
+                                </div>
+
+                                <div>
+                                    <Input
+                                        {...register('subject', { required: 'Subject is required' })}
+                                        className="p-8 rounded-[30px] bg-white"
+                                        type="text"
+                                        placeholder="Subject"
+                                    />
+                                    {errors.subject && (
+                                        <p className="text-red-500 text-sm mt-1">{errors.subject.message}</p>
+                                    )}
+                                </div>
                             </div>
-                            <div className='my-6'>
+
+                            <div className="my-6">
                                 <Textarea
+                                    {...register('message', { required: 'Message is required' })}
                                     placeholder="Your Message"
-                                    className="min-h-[150px] resize-none"
+                                    className="min-h-[150px] resize-none w-full"
                                 />
+                                {errors.message && (
+                                    <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
+                                )}
                             </div>
-                            <div className='mx-auto w-fit'>
-                                <PrimaryButton text={'Submit Message'} />
+
+                            <div className="mx-auto w-fit">
+                                <PrimaryButton text="Submit Message" />
                             </div>
                         </form>
                     </div>
