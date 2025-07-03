@@ -8,6 +8,9 @@ import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { services } from '@/Shared/Services/Services';
 import Link from 'next/link';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import PrimaryButton from '@/Shared/Buttons/PrimaryButton';
 
 const Index = () => {
     const { slug } = useRouter().query;
@@ -105,6 +108,26 @@ const Index = () => {
                                 </div>
                             )
                         })}
+                    </div>
+                    <div className='bg-[#F6F6F6] p-10 rounded-[30px] mt-10'>
+                        <h2 className='text-2xl font-semibold text-black'>Contact Us</h2>
+                        <form>
+                            <div className='grid grid-cols-1 gap-6'>
+                                <Input className={'p-8 rounded-[30px] bg-white'} type={'text'} placeholder='Your Name' />
+                                <Input className={'p-8 rounded-[30px] bg-white'} type={'email'} placeholder='Email Address' />
+                                <Input className={'p-8 rounded-[30px] bg-white'} type={'text'} placeholder='Phone Number' />
+                                <Input className={'p-8 rounded-[30px] bg-white'} type={'text'} placeholder='Subject' />
+                            </div>
+                            <div className='my-6'>
+                                <Textarea
+                                    placeholder="Your Message"
+                                    className="min-h-[150px] resize-none"
+                                />
+                            </div>
+                            <div className='mx-auto w-fit'>
+                                <PrimaryButton text={'Submit Message'} />
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

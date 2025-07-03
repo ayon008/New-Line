@@ -216,7 +216,7 @@ export const ServiceCard = ({ service }) => {
                 <div className='bg-[#E7F3FF] p-6 rounded-bl-[20px] rounded-br-[20px] h-full'>
                     <div>
                         <h3 className='text-2xl font-medium'>{title}</h3>
-                        <p className='text-sm mt-2 text-secondary'>{description}
+                        <p className='text-sm mt-2 text-secondary'>{description.slice(0,60)}...
                         </p>
                     </div>
                 </div>
