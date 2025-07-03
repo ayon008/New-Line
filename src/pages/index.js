@@ -14,6 +14,7 @@ import Process from "@/Shared/Process/Process";
 import States from "@/Shared/States/States";
 import Contact from "@/Shared/Contact/Contact";
 import Testimonial from "@/Shared/Testimonial/Testimonial";
+import Link from "next/link";
 
 export const Svg1 = ({ className }) => {
   return (
@@ -38,13 +39,15 @@ export default function Home() {
       <div className="2xl:!h-[920px] md:!h-[720px] sm:!h-[705px] min-h-[800px] h-[710px] w-full banner-container flex flex-col relative">
         <div className="2xl:px-0 md:px-6 px-6 h-full flex flex-col md:pt-[150px] pt-[72px] max-w-[1290px] w-full mx-auto">
           <div className="md:my-auto md:space-y-6 space-y-5 md:p-0 py-20">
-            <p className="subheadline xl:subheadline text-primary font-medium md:text-xl 2xl:text-2xl text-xl md:text-left text-center">We Clean, You Shine</p>
-            <h1 className={`md:text-6xl 2xl:text-7xl text-4xl font-semibold md:text-left text-center`}>Best Cleaning <br />
-              Experience From <br className="md:block hidden" />
-              Top Service</h1>
+            <p className="subheadline xl:subheadline text-primary font-medium md:text-base 2xl:text-xl text-base md:text-left text-center tracking-wider uppercase">Self-Maid Cleaning Solutions</p>
+            <h1 className={`md:text-5xl 2xl:text-6xl text-4xl font-semibold md:text-left text-center`}>Professional  <br />Home Cleaning in<br /> Montgomery, Alabama</h1>
             <div className="flex gap-4 items-center md:justify-start justify-center relative">
-              <PrimaryButton text={'Discover More'} />
-              <SecondaryButton text={'Our Services'} />
+              <Link href={'/about'}>
+                <PrimaryButton text={'Discover More'} />
+              </Link>
+              <Link href={'/services'}>
+                <SecondaryButton text={'Our Services'} />
+              </Link>
               <div className="absolute top-[80px] left-[350px] animation-side md:block hidden">
                 <svg width="260" height="100" viewBox="0 0 360 186" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M162.165 85.9702L163.513 86.6283L162.165 85.9702ZM75.7596 116.124L76.194 114.688L76.2081 114.692L76.2221 114.697L75.7596 116.124ZM11.4126 1.24254C12.031 0.691328 12.9792 0.74582 13.5304 1.36425L22.5129 11.4422C23.0641 12.0606 23.0096 13.0088 22.3912 13.56C21.7728 14.1112 20.8246 14.0567 20.2734 13.4383L12.2889 4.48013L3.33075 12.4646C2.71232 13.0158 1.76414 12.9613 1.21293 12.3429C0.661716 11.7245 0.716208 10.7763 1.33464 10.2251L11.4126 1.24254ZM358.829 187.747C319.185 184.926 261.691 176.517 218.132 160.419C196.379 152.38 177.903 142.353 166.917 129.984C161.405 123.778 157.74 116.939 156.541 109.436C155.341 101.926 156.633 93.8817 160.817 85.312L163.513 86.6283C159.555 94.7349 158.416 102.156 159.504 108.963C160.593 115.779 163.936 122.11 169.16 127.992C179.647 139.799 197.557 149.617 219.172 157.605C262.351 173.563 319.526 181.942 359.042 184.754L358.829 187.747ZM160.817 85.312C165.99 74.7169 171.984 68.1584 178.203 64.8441C184.466 61.5066 190.825 61.534 196.471 63.8612C207.632 68.4616 215.874 81.9468 215.89 95.7582C215.898 102.719 213.823 109.821 208.948 115.976C204.073 122.129 196.473 127.241 185.579 130.358C163.849 136.574 128.837 134.903 75.2971 117.551L76.2221 114.697C129.564 131.985 163.882 133.444 184.754 127.473C195.162 124.496 202.181 119.686 206.596 114.113C211.011 108.54 212.897 102.112 212.89 95.7617C212.875 82.9517 205.182 70.6966 195.328 66.6348C190.466 64.6309 185.046 64.5967 179.614 67.4917C174.137 70.41 168.518 76.3781 163.513 86.6283L160.817 85.312ZM75.3252 117.559C51.8306 110.451 6.59474 77.4174 10.9131 2.27625L13.9081 2.44837C9.67701 76.072 53.8937 107.941 76.194 114.688L75.3252 117.559Z" fill="#FFC702" />

@@ -16,7 +16,7 @@ const Team = () => {
                             <Image width={300} height={342} src={image1} className='group-hover/team:scale-105 transition-all duration-300 ease-in w-full rounded-[30px]' alt='team-1' />
                         </div>
                         <div className='p-7'>
-                            <h3 className='text-2xl font-semibold'>Shariar Ayon</h3>
+                            <h3 className='text-2xl font-semibold'>Ethan James</h3>
                             <p className='text-secondary mt-1 text-sm'>Home Cleaner</p>
                         </div>
                     </div>
@@ -25,8 +25,8 @@ const Team = () => {
                             <Image width={300} height={342} src={image2} className='group-hover/team:scale-105 transition-all duration-300 ease-in w-full rounded-[30px]' alt='team-1' />
                         </div>
                         <div className='p-7'>
-                            <h3 className='text-2xl font-semibold'>Shariar Ayon</h3>
-                            <p className='text-secondary mt-1 text-sm'>Home Cleaner</p>
+                            <h3 className='text-2xl font-semibold'>Olivia Grace</h3>
+                            <p className='text-secondary mt-1 text-sm'>Office Cleaner</p>
                         </div>
                     </div>
                     <div className='group/team team-card !overflow-hidden bg-white rounded-[30px]'>
@@ -34,8 +34,8 @@ const Team = () => {
                             <Image width={300} height={342} src={image3} className='group-hover/team:scale-105 transition-all duration-300 ease-in w-full rounded-[30px]' alt='team-1' />
                         </div>
                         <div className='p-7'>
-                            <h3 className='text-2xl font-semibold'>Shariar Ayon</h3>
-                            <p className='text-secondary mt-1 text-sm'>Home Cleaner</p>
+                            <h3 className='text-2xl font-semibold'>Logan Alexander</h3>
+                            <p className='text-secondary mt-1 text-sm'>Deep Cleaner</p>
                         </div>
                     </div>
                     <div className='group/team team-card !overflow-hidden bg-white rounded-[30px]'>
@@ -43,8 +43,8 @@ const Team = () => {
                             <Image width={300} height={342} src={image4} className='group-hover/team:scale-105 transition-all duration-300 ease-in w-full rounded-[30px]' alt='team-1' />
                         </div>
                         <div className='p-7'>
-                            <h3 className='text-2xl font-semibold'>Shariar Ayon</h3>
-                            <p className='text-secondary mt-1 text-sm'>Home Cleaner</p>
+                            <h3 className='text-2xl font-semibold'>Ava Charlotte</h3>
+                            <p className='text-secondary mt-1 text-sm'>Contract Cleaner</p>
                         </div>
                     </div>
                 </div>

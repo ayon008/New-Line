@@ -13,12 +13,17 @@ const Footer = () => {
                 <div className='flex items-center justify-between md:flex-row flex-col gap-10 w-full bg-white/10 backdrop-blur-3xl border border-white/20 rounded-[40px] px-10 py-4'>
                     <Logo />
                     <div className='flex items-center gap-10 text-white'>
-                        <Facebook />
+                        <Link href={'https://www.facebook.com/profile.php?id=61574234186629#'}>
+                            <Facebook
+                                size={14}
+                                className="text-white hover:text-secondary cursor-pointer transition-colors duration-200"
+                            />
+                        </Link>
                         <Twitter />
                         <Instagram />
                     </div>
                 </div>
-                <div className='grid md:grid-cols-4 grid-cols-1 mt-20 md:gap-0 gap-20'>
+                <div className='grid md:grid-cols-4 grid-cols-1 mt-20 md:gap-0 2xl:gap-5 gap-20'>
                     <div className='space-y-10'>
                         <h3 className='footer-headline text-2xl text-white font-semibold'>Contact Us</h3>
                         <div className='flex items-center gap-6'>
@@ -27,7 +32,7 @@ const Footer = () => {
                             </div>
                             <div>
                                 <h3 className='text-xl text-white font-semibold'>Address</h3>
-                                <p className='text-white text-base font-medium'>Dhaka,Bangladesh</p>
+                                <p className='text-white text-base font-medium'>1085 Foxhall Rd Selma AL 36703</p>
                             </div>
                         </div>
                         <div className='flex items-center gap-6'>
@@ -36,7 +41,7 @@ const Footer = () => {
                             </div>
                             <div>
                                 <h3 className='text-xl text-white font-semibold'>Phone</h3>
-                                <p className='text-white text-base font-medium'>+880-1726-108060</p>
+                                <p className='text-white text-base font-medium'>334-413-9029</p>
                             </div>
                         </div>
                         <div className='flex items-center gap-6'>
@@ -45,7 +50,7 @@ const Footer = () => {
                             </div>
                             <div>
                                 <h3 className='text-xl text-white font-semibold'>Email Us</h3>
-                                <p className='text-white text-base font-medium'>shariar.ayon128@gmail.com</p>
+                                <p className='text-white text-base font-medium'>selfmaidcleaningsolutions.com</p>
                             </div>
                         </div>
                     </div>

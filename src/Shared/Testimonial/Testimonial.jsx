@@ -9,35 +9,64 @@ import { Autoplay } from 'swiper/modules';
 import testimonial_1 from '../../../public/testi_1_1.webp'
 import testimonial_3 from '../../../public/testi_1_3.webp'
 import testimonial_4 from '../../../public/testi_1_4.webp'
-import { Star, StarIcon } from 'lucide-react';
+import testimonial_2 from '../../../public/testi_1_2.jpg'
+import { StarIcon } from 'lucide-react';
 
 export const TestimonialSlide = () => {
-    const TestimonialCard = ({ image }) => {
+    const testimonials = [
+        {
+            image: testimonial_1,
+            name: 'Ethan James',
+            role: 'Apartment Renter',
+            title: 'Excellent Service!',
+            comment: 'The team was punctual, professional, and left my place spotless. Highly recommended!',
+        },
+        {
+            image: testimonial_3,
+            name: 'Logan Bennett',
+            role: 'Business Owner',
+            title: 'Clean Office, Happy Staff',
+            comment: 'Our office has never looked better. Clean, fresh, and great service every time.',
+        },
+        {
+            image: testimonial_4,
+            name: 'Ava Reynolds',
+            role: 'Airbnb Host',
+            title: 'Airbnb Turnaround Pros',
+            comment: 'Guests always comment on how clean the place is. They’re a key part of my hosting success.',
+        },
+        {
+            image: testimonial_2,
+            name: 'Patrick',
+            role: 'Real Estate Agent',
+            title: 'Move-In Ready!',
+            comment: 'They make properties shine for showings and move-ins. Always impressed with the results.',
+        },
+    ]
+    const TestimonialCard = ({ testimonial }) => {
+        const { image, name, role, title, comment } = testimonial;
         return (
-            <div className='bg-white translate-y-0 hover:-translate-y-[4px] transition-all duration-300 ease-in space-y-4 p-10 rounded-[30px] max-w-[384px] w-full md:mx-0 mx-auto' style={{ boxShadow: '0px 4px 20px rgba(0,0,0,0.06)' }}>
+            <div className='bg-white translate-y-0 hover:-translate-y-[4px] transition-all duration-300 ease-in space-y-4 p-10 rounded-[30px] max-w-[384px] w-full md:mx-0 mx-auto min-h-[306px]' style={{ boxShadow: '0px 4px 20px rgba(0,0,0,0.06)' }}>
                 <div className='flex items-center gap-4'>
-                    <Image src={image} className='rounded-[8px]' alt='' />
+                    <Image src={image} className='rounded-[8px]' alt={name} />
                     <div>
-                        <h3 className='text-2xl font-semibold'>Shariar Ayon</h3>
-                        <p className='text-secondary text-base mt-[2px]'>Home Owner</p>
+                        <h3 className='text-2xl font-semibold'>{name}</h3>
+                        <p className='text-secondary text-base mt-[2px]'>{role}</p>
                     </div>
                 </div>
                 <div className='flex items-center gap-2'>
-                    {
-                        [0, 1, 2, 3, 4].map((number) => {
-                            return (
-                                <StarIcon key={number} className='w-4 h-4 text-primary' />
-                            )
-                        })
-                    }
+                    {[0, 1, 2, 3, 4].map((number) => (
+                        <StarIcon key={number} className='w-4 h-4 text-primary' />
+                    ))}
                 </div>
                 <div>
-                    <h2 className='text-2xl font-semibold'>Sparkle Cleaning Home</h2>
-                    <p className='text-secondary text-base mt-4'>New Line cleaning maintains the appearance and extend the life of surfaces,furnishing and fixtures</p>
+                    <h2 className='text-2xl font-semibold'>{title}</h2>
+                    <p className='text-secondary text-base mt-4'>{comment}</p>
                 </div>
             </div>
         )
     }
+
     return (
         <div>
             <div className='md:w-[1200px] w-full'>
@@ -62,18 +91,15 @@ export const TestimonialSlide = () => {
                     }}
                     className='mt-10 rounded-[30px]'
                 >
-                    <SwiperSlide className='md:p-2 p-[2px]'>
-                        <TestimonialCard image={testimonial_1} />
-                    </SwiperSlide>
-                    <SwiperSlide className='md:p-2 p-[2px]'>
-                        <TestimonialCard image={testimonial_3} />
-                    </SwiperSlide>
-                    <SwiperSlide className='md:p-2 p-[2px]'>
-                        <TestimonialCard image={testimonial_4} />
-                    </SwiperSlide>
-                    <SwiperSlide className='md:p-2 p-[2px]'>
-                        <TestimonialCard image={testimonial_1} />
-                    </SwiperSlide>
+                    {
+                        testimonials.map((testimonial, i) => {
+                            return (
+                                <SwiperSlide className='md:p-2 p-[2px]'>
+                                    <TestimonialCard testimonial={testimonial} />
+                                </SwiperSlide>
+                            )
+                        })
+                    }
                 </Swiper>
             </div>
         </div>

@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+import Link from 'next/link';
 import React from 'react';
 
 const NavComponent = () => {
@@ -12,15 +13,15 @@ const NavComponent = () => {
                             className='flex items-center gap-2 border-r border-secondary pr-10'
                         >
                             <Phone size={'14px'} color='#FFC702' />
-                            <p className='text-white text-sm hover:text-secondary transition-all duration-300'>+880-1726-108060</p>
+                            <p className='text-white text-sm hover:text-secondary transition-all duration-300'>334-413-9029</p>
                         </a>
 
                         <a
-                            href="mailto:shariar.ayon128@gmail.com"
+                            href="mailto:selfmaid1981@gmail.com"
                             className='flex items-center gap-2 px-10 border-r border-secondary'
                         >
                             <Mail size={'14px'} color='#FFC702' />
-                            <p className='text-white text-sm hover:text-secondary transition-all duration-300'>shariar.ayon128@gmail.com</p>
+                            <p className='text-white text-sm hover:text-secondary transition-all duration-300'>selfmaid1981@gmail.com</p>
                         </a>
 
                         <a
@@ -30,15 +31,18 @@ const NavComponent = () => {
                             className='flex items-center gap-2 pl-10'
                         >
                             <MapPin size={'14px'} color='#FFC702' />
-                            <p className='text-white text-sm hover:text-secondary transition-all duration-300'>Dhaka, Bangladesh</p>
+                            <p className='text-white text-sm hover:text-secondary transition-all duration-300'>1085 Foxhall Rd Selma AL 36703</p>
                         </a>
                     </div>
                     <div className='flex items-center gap-4'>
                         <p className='text-sm text-white'>Follow Us:</p>
-                        <Facebook
-                            size={14}
-                            className="text-white hover:text-secondary cursor-pointer transition-colors duration-200"
-                        />
+                        {/*  */}
+                        <Link href={'https://www.facebook.com/profile.php?id=61574234186629#'}>
+                            <Facebook
+                                size={14}
+                                className="text-white hover:text-secondary cursor-pointer transition-colors duration-200"
+                            />
+                        </Link>
                         <Twitter
                             size={14}
                             className="text-white hover:text-secondary cursor-pointer transition-colors duration-200"

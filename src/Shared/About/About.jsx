@@ -77,19 +77,23 @@ const About = () => {
                 </div>
             </div>
             <div className='flex-1 space-y-6'>
-                <p className='text-left text-primary md:text-xl text-base font-semibold subheadline'>About Us</p>
-                <h2 className='md:text-5xl 2xl:text-6xl text-3xl font-semibold'>
-                    Keeping Your Home Cleaner Service
+                <p className='text-left text-primary md:text-xl text-base font-semibold subheadline uppercase tracking-wider'>About Us</p>
+                <h2 className='md:text-4xl 2xl:text-5xl text-3xl font-semibold'>
+                    Top-Rated Cleaning Services in Montgomery
                 </h2>
                 <p className='text-secondary text-sm'>
-                    A cleaning service company specializes in providing professional cleaning solutions for residential, commercial, and industrial spaces. These services range from regular housekeeping tasks to deep cleaning, sanitation, and specialized cleaning services.
+                    Self-Maid Cleaning offers trusted residential and commercial cleaning across Montgomery. Our team is fast, friendly, and professional.<br />
+                    Built on hustle. Powered by precision. We clean your space like it’s our own—with care and consistency.
                 </p>
                 <div className='mt-10'>
                     <ul className='service-list text-secondary space-y-2 text-sm'>
-                        <li>One-off, weekly or fortnightly visits</li>
-                        <li>Book, manage & pay online</li>
-                        <li>Vetted & background-checked cleaners</li>
-                        <li>Road Test Preparation with 98% success</li>
+                        <li>Reliable service from trusted pros</li>
+                        <li>Custom plans to match your schedule</li>
+                        <li>Fast booking & clear communication</li>
+                        <li>We don’t cut corners—we clean them</li>
+                        <li>Perfect for homes, offices & rentals</li>
+                        <li>Move-in/move-out deep clean options</li>
+                        <li>Flexible weekly or one-time visits</li>
                     </ul>
                     <div className='mt-8'>
                         <PrimaryButton text={'Discover More'} />

@@ -39,7 +39,7 @@ const Choose = () => {
                         </div>
                         <div>
                             <h3 className='text-2xl font-semibold'>Reliable Cleaning Crew</h3>
-                            <p className='text-base mt-2 text-secondary'>Tailored cleaning services based on the specific needs and schedules.</p>
+                            <p className='text-base mt-2 text-secondary'>Reliable, professional service you can count on.</p>
                         </div>
                     </div>
                     <div className='flex items-center justify-between gap-6'>
@@ -48,7 +48,7 @@ const Choose = () => {
                         </div>
                         <div>
                             <h3 className='text-2xl font-semibold'>Flexible Package</h3>
-                            <p className='text-base mt-2 text-secondary'>TAchieving a higher level of cleanliness and sanitation compared to regular.</p>
+                            <p className='text-base mt-2 text-secondary'>We don’t cut corners—we clean them. </p>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@ const Choose = () => {
                         </div>
                         <div>
                             <h3 className='text-2xl font-semibold'>On-Time Services</h3>
-                            <p className='text-base mt-2 text-secondary'>Clients can focus on their core activities or enjoy their free time without.</p>
+                            <p className='text-base mt-2 text-secondary'>Immaculate results from people who take pride in their work</p>
                         </div>
                     </div>
                     <div className='flex items-center justify-between gap-6'>

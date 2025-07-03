@@ -7,6 +7,8 @@ import Team from '@/Shared/Team/Team';
 import Process from '@/Shared/Process/Process';
 import { TestimonialSlide } from '@/Shared/Testimonial/Testimonial';
 import Brand from '@/Shared/Brands/Brand';
+import Head from 'next/head';
+import { siteName } from '../_app';
 
 export const Banner = ({ name, breadcum }) => {
     return (
@@ -22,21 +24,26 @@ export const Banner = ({ name, breadcum }) => {
 
 const about = () => {
     return (
-        <div>
-            <Banner name={'About Us'} breadcum={<span className=''><span className='text-primary'>Home</span> {'>'} About Us</span>} />
-            <div className='mt-20 max-w-[1280px] mx-auto w-full 2xl:px-0 px-6'>
-                <About />
-            </div>
-            <States />
-            <Team />
-            <Process />
-            <div className='2xl:px-0 px-6 max-w-[1280px] mx-auto w-full'>
-                <div className='w-full review mb-20'>
-                    <TestimonialSlide />
+        <>
+            <Head>
+                <title>About Us | {siteName}</title>
+            </Head>
+            <div>
+                <Banner name={'About Us'} breadcum={<span className=''><span className='text-primary'>Home</span> {'>'} About Us</span>} />
+                <div className='mt-20 max-w-[1280px] mx-auto w-full 2xl:px-0 px-6'>
+                    <About />
                 </div>
-                <Brand />
+                <States />
+                <Team />
+                <Process />
+                <div className='2xl:px-0 px-6 max-w-[1280px] mx-auto w-full'>
+                    <div className='w-full review mb-20'>
+                        <TestimonialSlide />
+                    </div>
+                    <Brand />
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

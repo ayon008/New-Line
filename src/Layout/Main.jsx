@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react'
 import { Archivo } from 'next/font/google';
 import Footer from '@/Shared/Footer/Footer';
+import ScrollTopButton from '@/Shared/Buttons/TopButton';
 
 const archivo = Archivo({
     subsets: ['latin'], // or ['latin-ext'] if needed
@@ -38,10 +39,11 @@ const Main = ({ children }) => {
             <motion.div
                 initial={{ top: '-1000px', opacity: 0 }}
                 animate={state ? { top: '0px', opacity: 1 } : { top: '-1000px', opacity: 0 }}
-                className={`bg-white z-50 py-4 shadow-2xl fixed left-0 right-0 transition-all duration-300`}>
+                className={`bg-white z-50 py-1 shadow-2xl fixed left-0 right-0 transition-all duration-300`}>
                 <Nav />
             </motion.div>
             {children}
+            <ScrollTopButton />
             <Footer />
         </div>
     );
