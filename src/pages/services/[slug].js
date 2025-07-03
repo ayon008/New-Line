@@ -3,7 +3,6 @@ import React from 'react';
 import { Banner } from '../about';
 import { siteName } from '../_app';
 import Image from 'next/image';
-import image from '../../../public/service_details.jpg'
 import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { services } from '@/Shared/Services/Services';
@@ -110,7 +109,7 @@ const Index = () => {
                         })}
                     </div>
                     <div className='bg-[#F6F6F6] p-10 rounded-[30px] mt-10'>
-                        <h2 className='text-2xl font-semibold text-black'>Contact Us</h2>
+                        <h2 className='text-2xl font-semibold text-black mb-10'>Contact Us</h2>
                         <form>
                             <div className='grid grid-cols-1 gap-6'>
                                 <Input className={'p-8 rounded-[30px] bg-white'} type={'text'} placeholder='Your Name' />

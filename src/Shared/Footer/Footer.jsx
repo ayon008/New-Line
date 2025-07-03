@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import footer_Image from '../../../public/footer.jpg'
+import { services } from '../Services/Services';
 const Footer = () => {
     return (
         <div className='footer relative'>
@@ -86,25 +87,22 @@ const Footer = () => {
                     <div>
                         <h3 className='footer-headline text-2xl text-white font-semibold'>Our Services</h3>
                         <div className='mt-10 space-y-4'>
-                            {[
-                                { name: 'Basement Plumbing', href: '/services/basement-plumbing' },
-                                { name: 'Drain Plumbing', href: '/services/drain-plumbing' },
-                                { name: 'Water Line Repair', href: '/services/water-line-repair' },
-                                { name: 'Kitchen Plumbing', href: '/services/kitchen-plumbing' },
-                                { name: 'Gas Line Services', href: '/services/gas-line-services' },
-                                { name: 'Bathroom Services', href: '/services/bathroom-services' },
-                            ].map((service, index) => (
-                                <div className='w-fit'>
-                                    <Link key={index} href={service.href}>
-                                        <div className='flex items-center gap-2 group/footer'>
-                                            <ArrowRight className='text-[#FFC702] -rotate-[45deg] group-hover/footer:rotate-0 transition-all duration-200 ease-in' />
-                                            <p className='text-base text-white font-medium group-hover/footer:text-[#FFC702] transition-all duration-200 ease-in'>
-                                                {service.name}
-                                            </p>
+                            {
+                                services.map((service, i) => {
+                                    return (
+                                        <div className='w-fit' key={i} >
+                                            <Link href={`/services/${service.slug}`}>
+                                                <div className='flex items-center gap-2 group/footer'>
+                                                    <ArrowRight className='text-[#FFC702] -rotate-[45deg] group-hover/footer:rotate-0 transition-all duration-200 ease-in' />
+                                                    <p className='text-base text-white font-medium group-hover/footer:text-[#FFC702] transition-all duration-200 ease-in'>
+                                                        {service.title}
+                                                    </p>
+                                                </div>
+                                            </Link>
                                         </div>
-                                    </Link>
-                                </div>
-                            ))}
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                     <div>
